@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="COURTESY">
+		<value>Courtoisie</value>
+	</data>
+	<data name="FIRST_NAME">
+		<value>Premier Nom</value>
+	</data>
+	<data name="LAST_NAME">
+		<value>Dernier Nom</value>
+	</data>
+	<data name="TITLE">
+		<value>Titre</value>
+	</data>
+	<data name="REPORTS_TO">
+		<value>Est sous l'autorité de</value>
+	</data>
+	<data name="BIRTH_DATE">
+		<value>Date de naissance</value>
+	</data>
+	<data name="HIRE_DATE">
+		<value>Engager la Date</value>
+	</data>
+	<data name="HOME_PHONE">
+		<value>Téléphone particulier</value>
+	</data>
+	<data name="EXTENSION">
+		<value>Téléphoner l'Extension</value>
+	</data>
+	<data name="ADDRESS">
+		<value>Adresse</value>
+	</data>
+	<data name="CITY">
+		<value>Ville</value>
+	</data>
+	<data name="REGION">
+		<value>Région</value>
+	</data>
+	<data name="POSTAL_CODE">
+		<value>Code postal</value>
+	</data>
+	<data name="COUNTRY">
+		<value>Pays</value>
+	</data>
+	<data name="PHOTO">
+		<value>Photo</value>
+	</data>
+	<data name="NOTES">
+		<value>Notes</value>
+	</data>
+	<data name="SELECTED_TER">
+		<value>Territoires choisis</value>
+	</data>
+	<data name="AVAILABLE_TER">
+		<value>Territoires disponibles</value>
+	</data>
+	<data name="OK">
+		<value>D'ACCORD</value>
+	</data>
+	<data name="CANCEL">
+		<value>Annuler</value>
+	</data>
+</root>

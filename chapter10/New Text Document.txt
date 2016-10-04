@@ -1,0 +1,1 @@
+Class attributes demo needs to be redone as 1.1

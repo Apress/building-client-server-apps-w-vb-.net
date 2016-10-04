@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Errata</title></head>
+	<body>
+		<h2>Building Client/Server Applications With VB.NET</h2>
+		<h3>An Example Driven Approach</h3>
+		<h4>Errata</h4>
+		<p>This information is designed to supplement the information in the readme files, 
+			answer some common questions that have been asked by readers and correct 
+			several errors in the book text.
+		</p>
+		<OL>
+			<LI>
+				Binary Formatter Error
+				<br>
+				<br>
+				The error you will see is the following:
+				<br>
+				<STRONG>An unhandled exception of type 'System.Runtime.Serialization. 
+					SerializationException' occurred in mscorlib.dll
+					<BR>
+					Additional information: BinaryFormatter Version incompatibility. Expected 
+					Version 1.0. Received Version 1008738336.1684104552.</STRONG>
+				<br>
+				<br>
+				First, you need to understand why you are receving the binary formatter 
+				exception. The reason is that there is a problem with the connection to the 
+				server. The IIS server then returns an error in SOAP format that starts with 
+				something like the following "HTTP 1.1 ". Since you are using a binary 
+				formatter the first thing .NET looks for is the version information and it sees 
+				"1.1" when it is expecting a binary version number of 1.0. This causes the 
+				binary formatter exception.
+				<br>
+				<br>
+				Second, you need to know how to get to the root cause of the exception. The 
+				root cause is typically a malformed web.config file or an error in the coding 
+				on the client side. Any other error will return a regular exception that can be 
+				diagnosed in the design environment. So how do you get additional information 
+				on the exception. There are two ways to do this:
+				<br>
+				<br>
+				- Use a program called TCPTrace available from 
+				http://www.pocketsoap.com/tcptrace/ This program sends a stream from the client 
+				to the server through a sniffer that captures all outgoing and incoming data 
+				over the specified port. HOWEVER, there is an issue with this in that it will 
+				not work for this particular application because it uses Integrated 
+				Authentication and TCPTrace cannot forward the NT Security Token.
+				<br>
+				<br>
+			- Switch from the binaryformatter to the soapformatter. To do this, change the 
+			code in the frmMain form constructor method form the binaryformatter to the 
+			soapformatter as follows: chan = New HttpChannel(props, New 
+			SoapClientFormatterSinkProvider, New _ SoapServerFormatterSinkProvider) Do not 
+			run the application when you're not debugging in this mode as it is orders of 
+			magnitude slower as you'll.
+			<LI>
+				Several readers have mentioned that I had a tendency throughout the book to 
+				create an instance of a manager class using the following code:
+				<br>
+				<br>
+				Dim objEmployeeMgr as ucEmployeeMgr = objEmployeeMgr.GetInstance()
+				<br>
+				<br>
+				This method works in version 1.0 and 1.1 however, since GetInstance is a shared 
+				method, technically the call should be made as follows:
+				<br>
+				<br>
+				Dim objEmployeeMgr as ucEmployeeMgr = ucEmployeeMgr.GetInstance()
+			</LI>
+		</OL>
+	</body>
+</html>

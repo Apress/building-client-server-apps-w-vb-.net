@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ErrorLogTest", "ErrorLogTest.vbproj", "{17F48D00-F37F-4D3D-841D-9054261E5972}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{17F48D00-F37F-4D3D-841D-9054261E5972}.Debug.ActiveCfg = Debug|.NET
+		{17F48D00-F37F-4D3D-841D-9054261E5972}.Debug.Build.0 = Debug|.NET
+		{17F48D00-F37F-4D3D-841D-9054261E5972}.Release.ActiveCfg = Release|.NET
+		{17F48D00-F37F-4D3D-841D-9054261E5972}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
